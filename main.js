@@ -37,9 +37,8 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(bodyParser.json());
 
-mongoose.connect('mongodb://localhost/TestingDatas');
-
-var db = mongoose.connection;
+//mongoose.connect('mongodb://localhost/TestingDatas');
+mongoose.connect("mongodb://localhost/TestingDatas", { useNewUrlParser: true });
 
 var port = process.env.PORT || 8080;
 
