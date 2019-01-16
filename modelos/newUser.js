@@ -9,6 +9,7 @@ let userSchema = new Schema({
     currentDate:   {type: String, required: true, max: 100},
     experimentDuration:   {type: String, required: true, max: 100},
     firstLedView: {type: String, required: true, max: 100},
+    firstLedTimer: {type: String, required: true, max: 100},
     firstInteraction: {type: String, required: true, max: 100},
     firstCorrectInteraction: {type: String, required: true, max: 100}
 });
