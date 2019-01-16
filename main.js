@@ -23,6 +23,10 @@ io.on('connection', function(socket) {
         console.log(data);
         io.emit("messages", data);
     });
+    socketIO.on('finishTesting'), function(data){
+        console.log('Test terminado');
+        io.emit('finish', data);
+    }
 });
 
 app.use(function(req, res, next) {
