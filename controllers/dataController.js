@@ -18,14 +18,20 @@ exports.index = function (req, res) {
 
 exports.new = function (req, res) {
     var contact = new Contact();
-    contact.testerName = req.body.testerName ? req.body.testerName : "sergio";
-    contact.userName = req.body.userName ? req.body.userName : "luisaBot";
-    contact.userBirthDate = req.body.userBirthDate ? req.body.userBirthDate : "30/04/1980";
-    contact.userGender = req.body.userGender ? req.body.userGender : "female";
-    contact.currentDate = req.body.currentDate ? req.body.currentDate : "female";
-    contact.experimentDuration = req.body.experimentDuration ? req.body.experimentDuration : "female";
-    contact.roomOfexperiment = req.body.roomOfexperiment ? req.body.roomOfexperiment : "female";
-    contact.experiment = req.body.experiment ? req.body.experiment : "female";
+    contact.testerName = req.body.testerName ? req.body.testerName : "null";
+    contact.userName = req.body.userName ? req.body.userName : "null";
+    contact.userBirthDate = req.body.userBirthDate ? req.body.userBirthDate : "null";
+    contact.userGender = req.body.userGender ? req.body.userGender : "null";
+    contact.currentDate = req.body.currentDate ? req.body.currentDate : "null";
+    contact.experimentDuration = req.body.experimentDuration ? req.body.experimentDuration : "null";
+    contact.roomOfexperiment = req.body.roomOfexperiment ? req.body.roomOfexperiment : "null";
+    contact.experiment = req.body.experiment ? req.body.experiment : "null";
+    contact.lampLed = req.body.lampLed ? req.body.lampLed : "null";
+    contact.lampInteraction = req.body.lampInteraction ? req.body.lampInteraction : "null";
+    contact.tvLed = req.body.tvLed ? req.body.tvLed : "null";
+    contact.tvInteraction = req.body.tvInteraction ? req.body.tvInteraction : "null";
+    contact.courtinLed = req.body.courtinLed ? req.body.courtinLed : "null";
+    contact.courtinInteraction = req.body.courtinInteraction ? req.body.courtinInteraction : "null";
     console.log(req.body);
     contact.save(function (err) {
         // if (err)
