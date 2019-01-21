@@ -10,12 +10,12 @@ let userSchema = new Schema({
     experimentDuration:   {type: String, required: true, max: 100},
     roomOfexperiment:   {type: String, required: true, max: 100},
     experiment:   {type: String, required: true, max: 100},
-    lampLed: {type: String, required: false, max: 100},
-    lampInteraction: {type: String, required: false, max: 100},
-    tvLed: {type: String, required: false, max: 100},
-    tvInteraction: {type: String, required: false, max: 100},
-    courtinLed: {type: String, required: false, max: 100},
-    courtinInteraction: {type: String, required: false, max: 100}
+    lampLed: {type: String, required: true, max: 100},
+    lampInteraction: {type: String, required: true, max: 100},
+    tvLed: {type: String, required: true, max: 100},
+    tvInteraction: {type: String, required: true, max: 100},
+    courtinLed: {type: String, required: true, max: 100},
+    courtinInteraction: {type: String, required: true, max: 100}
 });
 
 var user = module.exports = mongoose.model('userDatas', userSchema);
