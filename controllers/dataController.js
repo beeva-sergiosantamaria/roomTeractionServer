@@ -20,8 +20,12 @@ exports.new = function (req, res) {
     var contact = new Contact();
     contact.testerName = req.body.testerName ? req.body.testerName : "sergio";
     contact.userName = req.body.userName ? req.body.userName : "luisaBot";
-    contact.userDate = req.body.userDate ? req.body.userDate : "30/04/1980";
+    contact.userBirthDate = req.body.userBirthDate ? req.body.userBirthDate : "30/04/1980";
     contact.userGender = req.body.userGender ? req.body.userGender : "female";
+    contact.currentDate = req.body.currentDate ? req.body.currentDate : "female";
+    contact.experimentDuration = req.body.experimentDuration ? req.body.experimentDuration : "female";
+    contact.roomOfexperiment = req.body.roomOfexperiment ? req.body.roomOfexperiment : "female";
+    contact.experiment = req.body.experiment ? req.body.experiment : "female";
     console.log(req.body);
     contact.save(function (err) {
         // if (err)
